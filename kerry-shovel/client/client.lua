@@ -168,8 +168,8 @@ end
 
 RegisterNetEvent('kerry-shovel:client:start')
 AddEventHandler('kerry-shovel:client:start', function(source)
+    if isHoldingShovel then return end
 	isHoldingShovel = true
-	Wait(1000)
 	local player = PlayerPedId()
     local coords = GetEntityCoords(player)
     local boneIndex = GetEntityBoneIndexByName(player, "SKEL_R_Hand")
